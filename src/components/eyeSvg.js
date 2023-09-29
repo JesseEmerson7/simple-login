@@ -12,7 +12,7 @@ const EyeSvg = ({ onClick }) => {
   const svgOpen = (
     <div onClick={toggleHidden}>
       <svg
-        className="h-4 self-center fill-green-700 mr-2"
+        className="h-4 self-center fill-green-700 mr-2 hover:fill-slate-900 delay-150"
         data-name="Layer 1"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20.07 11"
@@ -25,7 +25,7 @@ const EyeSvg = ({ onClick }) => {
   const svgClosed = (
     <div onClick={toggleHidden}>
       <svg
-        className="h-4 self-center fill-green-700 mr-2"
+        className="h-4 self-center  mr-2 hover:fill-green-700 delay-150"
         viewBox="0 0 20.07 11"
         xmlns="http://www.w3.org/2000/svg"
       >

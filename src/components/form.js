@@ -18,6 +18,8 @@ const Form = () => {
   });
   const [userInputColor, changeUserColor] = useState(true);
   const [passInputColor, changePassColor] = useState(true);
+  const [submitErr, changeErr] = useState(false);
+  const [loginBtnValue, changeLoginBtn] = useState("Log-in");
   //----component functions----
   const handleEyeClick = () => {
     passwordState === "password"
@@ -40,16 +42,23 @@ A token would be added to the user as well.
  */
     e.preventDefault();
     //temp input checker until server side is done.
-    
+    changeErr(false);
+    changeLoginBtn("Submitting...");
     if (formInputs.userId === "admin" && formInputs.password === "admin") {
+      changeLoginBtn("Log-in");
+      changeFormInputs({
+        userId: "",
+        password: "",
+      });
       window.location = "https://github.com/JesseEmerson7";
     } else if (!formInputs.userId) {
       firstInputRef.current.focus();
     } else if (!formInputs.password) {
       secondInputRef.current.focus();
-    }else{
-
+    } else {
+      changeErr(true);
     }
+    changeLoginBtn("Log-in");
   };
   //onBlur of inputs
   const handleEmptyInput = (e) => {
@@ -61,24 +70,25 @@ A token would be added to the user as well.
     const input = e.target.value;
     input ? changePassColor(true) : changePassColor(false);
   };
-
+  //----JSX return-----------------------------------------------------------------------
   return (
-    <section className=" bg-slate-400 w-full min-h-screen">
+    <section className=" w-full min-h-screen">
       {/* form div */}
-      <div className="w-full px-4 pt-2 bg-white min-h-screen">
+      <div className="w-full lg:w-4/12 md:w-8/12 md:shadow-2xl md:p-16 md:relative md:bottom-24 md:mx-auto md:rounded-sm px-4 pt-2 bg-white min-h-screen">
         {/* title */}
         <div className="mb-2">
           <span className=" text-2xl">Welcome to</span>
-          <img
+          <a href="https://forms.floridarealtors.org/index/signin"><img
             src="https://forms.floridarealtors.org/fs2/images/siteLogos/login-simplicity-logo.png"
             alt="Welcome to Form Simplicity"
-          />
+          /></a>
+          
         </div>
         {/* form user / password */}
         <form onSubmit={(e) => handleSubmit(e)}>
           {/* username */}
           <div className="flex flex-col mb-12">
-            <label className="needed label" for="username">
+            <label className="needed label font-bold" for="username">
               User ID
             </label>
             <input
@@ -100,7 +110,7 @@ A token would be added to the user as well.
           <div className="mb-10">
             <div className="flex flex-row justify-between">
               {/* reveal button to go here */}
-              <label className="needed label" for="username">
+              <label className="needed label font-bold" for="username">
                 Password
               </label>
               <EyeSvg onClick={handleEyeClick} />
@@ -130,10 +140,14 @@ A token would be added to the user as well.
             </a>
           </div>
 
-          <div className="hidden errorPop"> Invalid user ID or password</div>
-          <div className="mb-5 w-full flex justify-center">
+          <div
+            className={!submitErr ? "hidden" : "errorPop text-center text-xl"}
+          >
+            Invalid user ID or password
+          </div>
+          <div className="mb-5 mt-4 w-full flex justify-center">
             <button className="loginBtn block duration-200" type="submit">
-              Log-in
+              {loginBtnValue}
             </button>
           </div>
 
@@ -148,12 +162,13 @@ A token would be added to the user as well.
                 Privacy Policy
               </a>
             </p>
-            <img
+            <a href="https://www.floridarealtors.org/" target="blank"><img
               className="w-full pb-14"
               src="https://forms.floridarealtors.org/fs2/images/loginLogos/florida-logo.png"
               alt="Florida Realtors Logo"
               id="formLogo"
-            />
+            /></a>
+           
           </div>
         </form>
       </div>

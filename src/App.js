@@ -1,15 +1,15 @@
 //components
-import TimeHeader from './components/timeHeader'
-import Form from './components/form'
+import TimeHeader from "./components/timeHeader";
+import Form from "./components/form";
 
-import {util} from './util/index.js'
+import { util } from "./util/index.js";
 
 function App() {
   const greeting = util.getGreeting();
   return (
     <div>
-      <TimeHeader greeting = {greeting} />
-      <Form/>
+      <TimeHeader greeting={greeting} />
+      <Form />
     </div>
   );
 }

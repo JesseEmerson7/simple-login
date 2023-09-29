@@ -18,7 +18,7 @@ const TimeHeader = ({ greeting }) => {
         Good {greeting}
       </p>
       {/* top banner image changing based on time */}
-      <div id={headerImg} className=" h-32 w-full"></div>
+      <div id={headerImg} className=" h-32 md:h-96 w-full"></div>
     </div>
   );
 };
