@@ -2,8 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --primaryColor: rgb(122,193,67);
+  --secondaryColor: rgb(63, 134, 8);
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+.FRGreen{
+  background-color:var(--primaryColor);
 }

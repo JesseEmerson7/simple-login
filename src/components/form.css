@@ -1,31 +1,47 @@
+section {
+  color: rgb(99, 103, 100);
+}
+
 .needed::after {
-    content:"*" ;
-    color:red 
+  content: "*";
+  color: red;
 }
 
 .label {
-    font-size: large;
+  font-size: large;
 }
 
-.formInput{
-   border: 1px dashed rgb(1, 100, 1);
-   border-bottom: 1px solid rgb(1, 100, 1);
-   height: 2rem;
+.formInput {
+  border-bottom: 2px solid rgb(3, 50, 3);
+  height: 2rem;
+}
+
+.formInput::marker {
+  border: 1px dashed rgb(1, 100, 1);
 }
 
 input:focus {
-    outline: none;
-  }
-  
-  .dgLink {
-    color: rgb(6, 142, 6);
-  }
+  outline: none;
+  border: 1px dashed rgb(1, 100, 1);
+  border-bottom: 2px solid rgb(1, 100, 1);
+  height: 2rem;
+}
 
-  .loginBtn {
-    background-color: rgba(6, 142, 6, 0.418);
-    width: 90%;
-    margin: auto 0;
-    padding: 4px;
-    border: 1px solid green;
-    border-radius: 4px;
-  }
+.dgLink {
+  color: rgb(6, 142, 6);
+}
+
+.loginBtn {
+  background-color: rgba(122, 193, 67, 0.607);
+  width: 90%;
+  margin: auto 0;
+  padding: 4px;
+  border: 1px solid var(--secondaryColor);
+  border-radius: 4px;
+}
+
+.loginBtn:hover {
+  background-color: var(--secondaryColor);
+  color: white;
+  text-decoration: underline;
+}
