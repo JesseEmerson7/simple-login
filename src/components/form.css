@@ -1,0 +1,31 @@
+.needed::after {
+    content:"*" ;
+    color:red 
+}
+
+.label {
+    font-size: large;
+}
+
+.formInput{
+   border: 1px dashed rgb(1, 100, 1);
+   border-bottom: 1px solid rgb(1, 100, 1);
+   height: 2rem;
+}
+
+input:focus {
+    outline: none;
+  }
+  
+  .dgLink {
+    color: rgb(6, 142, 6);
+  }
+
+  .loginBtn {
+    background-color: rgba(6, 142, 6, 0.418);
+    width: 90%;
+    margin: auto 0;
+    padding: 4px;
+    border: 1px solid green;
+    border-radius: 4px;
+  }
