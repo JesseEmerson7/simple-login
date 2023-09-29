@@ -15,6 +15,11 @@ section {
   border-bottom: 2px solid rgb(3, 50, 3);
   height: 2rem;
 }
+.formInputFalse {
+  border: 1px dashed rgb(220, 40, 8);
+  border-bottom: 2px solid rgb(220, 40, 8);
+  height: 2rem;
+}
 
 .formInput::marker {
   border: 1px dashed rgb(1, 100, 1);
@@ -44,4 +49,8 @@ input:focus {
   background-color: var(--secondaryColor);
   color: white;
   text-decoration: underline;
+}
+
+.errorPop {
+    color: rgb(197, 8, 8);
 }

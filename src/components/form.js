@@ -3,8 +3,9 @@ import EyeSvg from "./eyeSvg";
 import "../components/form.css";
 //login form component
 const Form = () => {
-  //crating a ref to first input
+  //crating a ref to first input and second
   const firstInputRef = useRef(null);
+  const secondInputRef = useRef(null);
   //focusing on load
   useEffect(() => {
     firstInputRef.current.focus();
@@ -15,19 +16,50 @@ const Form = () => {
     userId: "",
     password: "",
   });
+  const [userInputColor, changeUserColor] = useState(true);
+  const [passInputColor, changePassColor] = useState(true);
   //----component functions----
   const handleEyeClick = () => {
     passwordState === "password"
       ? setPasswordState("text")
       : setPasswordState("password");
   };
-
+  //form change handler
   const handleFormChange = (e) => {
     const { name, value } = e.target;
     changeFormInputs({
       ...formInputs,
       [name]: value,
     });
+  };
+  //on submit handler
+  const handleSubmit = (e) => {
+    /*Here I would send a POST to the server side. (SELECT * FROM users
+WHERE username = userId AND password = password;) The password would be unHashed and compared.
+A token would be added to the user as well.
+ */
+    e.preventDefault();
+    //temp input checker until server side is done.
+    
+    if (formInputs.userId === "admin" && formInputs.password === "admin") {
+      window.location = "https://github.com/JesseEmerson7";
+    } else if (!formInputs.userId) {
+      firstInputRef.current.focus();
+    } else if (!formInputs.password) {
+      secondInputRef.current.focus();
+    }else{
+
+    }
+  };
+  //onBlur of inputs
+  const handleEmptyInput = (e) => {
+    const input = e.target.value;
+    input ? changeUserColor(true) : changeUserColor(false);
+  };
+
+  const handleEmptyPassInput = (e) => {
+    const input = e.target.value;
+    input ? changePassColor(true) : changePassColor(false);
   };
 
   return (
@@ -43,7 +75,7 @@ const Form = () => {
           />
         </div>
         {/* form user / password */}
-        <form>
+        <form onSubmit={(e) => handleSubmit(e)}>
           {/* username */}
           <div className="flex flex-col mb-12">
             <label className="needed label" for="username">
@@ -51,15 +83,18 @@ const Form = () => {
             </label>
             <input
               onChange={(e) => handleFormChange(e)}
+              onBlur={handleEmptyInput}
               name="userId"
               autofocus
               type="text"
               required
               id="usernameInput"
-              className="formInput"
+              className={userInputColor ? "formInput" : "formInputFalse"}
               ref={firstInputRef}
             />
-            <div className="hidden errorPop">Please enter your user ID</div>
+            <div className={userInputColor ? "hidden" : "errorPop"}>
+              Please enter your user ID
+            </div>
           </div>
           {/* password */}
           <div className="mb-10">
@@ -72,14 +107,22 @@ const Form = () => {
             </div>
             <input
               onChange={(e) => handleFormChange(e)}
+              onBlur={(e) => {
+                handleEmptyPassInput(e);
+              }}
+              ref={secondInputRef}
               name="password"
               autofocus
               type={passwordState}
               required
               id="usernameInput"
-              className="formInput w-full"
+              className={
+                passInputColor ? "formInput w-full" : "formInputFalse w-full"
+              }
             />
-            <div className="hidden errorPop">Please enter your password</div>
+            <div className={passInputColor ? "hidden errorPop" : "errorPop"}>
+              Please enter your password
+            </div>
           </div>
           <div className="mb-10">
             <a className="dgLink text-sm hover:underline" href="google.com">
