@@ -16,3 +16,8 @@
 .FRGreen{
   background-color:var(--primaryColor);
 }
+
+footer {
+  background-color: rgb(79,138,190);
+  height: 45px;
+}

@@ -78,17 +78,25 @@ A token would be added to the user as well.
         {/* title */}
         <div className="mb-2">
           <span className=" text-2xl">Welcome to</span>
-          <a href="https://forms.floridarealtors.org/index/signin"><img
-            src="https://forms.floridarealtors.org/fs2/images/siteLogos/login-simplicity-logo.png"
-            alt="Welcome to Form Simplicity"
-          /></a>
-          
+          <a href="https://forms.floridarealtors.org/index/signin">
+            <img
+              src="https://forms.floridarealtors.org/fs2/images/siteLogos/login-simplicity-logo.png"
+              alt="Welcome to Form Simplicity"
+            />
+          </a>
         </div>
         {/* form user / password */}
         <form onSubmit={(e) => handleSubmit(e)}>
           {/* username */}
           <div className="flex flex-col mb-12">
-            <label className="needed label font-bold" for="username">
+            <label
+              className={
+                userInputColor
+                  ? "needed label font-bold"
+                  : "needed text-red-600 label font-bold"
+              }
+              for="username"
+            >
               User ID
             </label>
             <input
@@ -110,7 +118,14 @@ A token would be added to the user as well.
           <div className="mb-10">
             <div className="flex flex-row justify-between">
               {/* reveal button to go here */}
-              <label className="needed label font-bold" for="username">
+              <label
+                className={
+                  passInputColor
+                    ? "needed label font-bold"
+                    : "needed text-red-600 label font-bold"
+                }
+                for="username"
+              >
                 Password
               </label>
               <EyeSvg onClick={handleEyeClick} />
@@ -162,13 +177,14 @@ A token would be added to the user as well.
                 Privacy Policy
               </a>
             </p>
-            <a href="https://www.floridarealtors.org/" target="blank"><img
-              className="w-full pb-14"
-              src="https://forms.floridarealtors.org/fs2/images/loginLogos/florida-logo.png"
-              alt="Florida Realtors Logo"
-              id="formLogo"
-            /></a>
-           
+            <a href="https://www.floridarealtors.org/" target="blank">
+              <img
+                className="w-full pb-14"
+                src="https://forms.floridarealtors.org/fs2/images/loginLogos/florida-logo.png"
+                alt="Florida Realtors Logo"
+                id="formLogo"
+              />
+            </a>
           </div>
         </form>
       </div>
