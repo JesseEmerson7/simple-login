@@ -74,7 +74,7 @@ A token would be added to the user as well.
   return (
     <section className=" w-full min-h-screen">
       {/* form div */}
-      <div className="w-full lg:w-4/12 md:w-8/12 md:shadow-2xl md:p-16 md:relative md:bottom-24 md:mx-auto md:rounded-sm px-4 pt-2 bg-white min-h-screen">
+      <div className="w-full lg:w-5/12 xl:w-4/12 md:w-8/12 md:shadow-2xl md:p-16 md:relative md:bottom-24 md:mx-auto md:rounded-sm px-4 pt-2 bg-white min-h-screen">
         {/* title */}
         <div className="mb-2">
           <span className=" text-2xl">Welcome to</span>

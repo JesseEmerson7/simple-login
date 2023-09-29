@@ -9,7 +9,7 @@ const Footer = () => {
           Accessibility
         </a>
       </div>
-      <div className="flex flex-row w-1/5 gap-8">
+      <div className="flex flex-row justify-start w-2/5 gap-8">
         <a className="hover:fill-slate-600" href="https://github.com/JesseEmerson7">
           <svg
             className="h-4"
