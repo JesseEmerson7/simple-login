@@ -1,0 +1,26 @@
+import "../components/timeHeader.css";
+
+const TimeHeader = ({ greeting }) => {
+  //rendering image based off time
+  let headerImg;
+  if (greeting === "Morning") {
+    headerImg = "morningImg";
+  } else if (greeting === "Afternoon") {
+    headerImg = "afternoonImg";
+  } else {
+    headerImg = "eveningImg";
+  }
+
+  return (
+    <div>
+      {/* top greeting message */}
+      <p className="w-full flex justify-center items-center h-16 text-center bg-lime-500 text-3xl font-light">
+        Good {greeting}
+      </p>
+      {/* top banner image changing based on time */}
+      <div id={headerImg} className=" h-32 w-full"></div>
+    </div>
+  );
+};
+
+export default TimeHeader;

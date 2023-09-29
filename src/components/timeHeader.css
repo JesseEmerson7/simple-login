@@ -1,0 +1,21 @@
+#morningImg {
+  background-image: url("../images/earlyMorning.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#afternoonImg {
+    background-image: url("../images/afternoon.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  
+#eveningImg {
+    background-image: url("../images/evening.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
