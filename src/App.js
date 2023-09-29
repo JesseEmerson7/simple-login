@@ -1,5 +1,6 @@
 //components
 import TimeHeader from './components/timeHeader'
+import Form from './components/form'
 
 import {util} from './util/index.js'
 
@@ -8,7 +9,7 @@ function App() {
   return (
     <div>
       <TimeHeader greeting = {greeting} />
-      <div></div>
+      <Form/>
     </div>
   );
 }

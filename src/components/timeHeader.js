@@ -1,5 +1,5 @@
 import "../components/timeHeader.css";
-
+//greeting and image header component
 const TimeHeader = ({ greeting }) => {
   //rendering image based off time
   let headerImg;
