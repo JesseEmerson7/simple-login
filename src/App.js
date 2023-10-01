@@ -2,7 +2,7 @@
 import TimeHeader from "./components/timeHeader";
 import Form from "./components/form";
 import Footer from "./components/footer";
-import Reasons from "./components/reasons";
+import Reasons from "./components/jseReasons";
 
 import { util } from "./util/index.js";
 import { useState } from "react";
