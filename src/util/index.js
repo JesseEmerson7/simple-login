@@ -4,7 +4,7 @@ export const util = {
     const today = new Date();
     const hour = today.getHours();
     // if morning return morning and so on
-    if (hour >= 1 && hour <= 11) {
+    if (hour >= 0 && hour <= 11) {
       return "Morning";
     } else if (hour >= 12 && hour <= 17) {
       return "Afternoon";

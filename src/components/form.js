@@ -28,6 +28,10 @@ const Form = () => {
   };
   //form change handler
   const handleFormChange = (e) => {
+    //changing color back to green if not empty
+    changeUserColor(true);
+    changePassColor(true);
+    //changing form object value
     const { name, value } = e.target;
     changeFormInputs({
       ...formInputs,
@@ -150,7 +154,10 @@ A token would be added to the user as well when logged in.
             </div>
           </div>
           <div className="mb-10">
-            <a className="dgLink text-sm hover:underline font-semibold" href="https://github.com/JesseEmerson7S">
+            <a
+              className="dgLink text-sm hover:underline font-semibold"
+              href="https://github.com/JesseEmerson7S"
+            >
               I would like to reset or register my password.
             </a>
           </div>

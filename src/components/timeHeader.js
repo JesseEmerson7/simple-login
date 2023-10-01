@@ -14,7 +14,7 @@ const TimeHeader = ({ greeting }) => {
   return (
     <div>
       {/* top greeting message */}
-      <p className="w-full flex justify-center items-center h-16 text-center FRGreen text-3xl font-thin">
+      <p className="w-full flex justify-center items-center h-16 text-center FRGreen text-3xl thin">
         Good {greeting}
       </p>
       {/* top banner image changing based on time */}
