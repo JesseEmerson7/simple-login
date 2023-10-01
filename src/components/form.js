@@ -150,7 +150,7 @@ A token would be added to the user as well when logged in.
             </div>
           </div>
           <div className="mb-10">
-            <a className="dgLink text-sm hover:underline font-semibold" href="google.com">
+            <a className="dgLink text-sm hover:underline font-semibold" href="https://github.com/JesseEmerson7S">
               I would like to reset or register my password.
             </a>
           </div>
