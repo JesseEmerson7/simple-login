@@ -1,5 +1,5 @@
 section {
-  color: rgb(99, 103, 100);
+  color: rgb(76, 81, 76);
 }
 
 .needed::after {
@@ -19,6 +19,7 @@ section {
   border: 1px dashed rgb(220, 40, 8);
   border-bottom: 2px solid rgb(220, 40, 8);
   height: 2rem;
+  border-radius: 5px;
 }
 
 .formInput::marker {
@@ -33,7 +34,7 @@ input:focus {
 }
 
 .dgLink {
-  color: rgb(6, 142, 6);
+  color: rgb(5, 129, 5);
 }
 
 .loginBtn {
@@ -52,5 +53,20 @@ input:focus {
 }
 
 .errorPop {
-    color: rgb(197, 8, 8);
+  color: rgb(197, 8, 8);
+}
+
+.fadeIn {
+  animation: fadeIn 2s;
+  opacity: 1;
+  animation-duration: 500ms;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

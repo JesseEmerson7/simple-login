@@ -5,12 +5,18 @@ const Footer = () => {
         <a className="hover:underline" href="http://www.techhelpline.com/">
           Computer Repair
         </a>
-        <a href="https://forms.floridarealtors.org/index/accessibility">
+        <a
+          className="hover:underline"
+          href="https://forms.floridarealtors.org/index/accessibility"
+        >
           Accessibility
         </a>
       </div>
       <div className="flex flex-row justify-start w-2/5 gap-8">
-        <a className="hover:fill-slate-600" href="https://github.com/JesseEmerson7">
+        <a
+          className="hover:fill-slate-600"
+          href="https://github.com/JesseEmerson7"
+        >
           <svg
             className="h-4"
             data-name="Layer 1"
@@ -20,9 +26,11 @@ const Footer = () => {
             <path d="M11.12,3.48H7.94c-.37,0-.79.49-.79,1.15V6.92h4v3.27h-4V20H3.4V10.19H0V6.92H3.4V5A4.71,4.71,0,0,1,7.81,0h3.3Z"></path>
           </svg>
         </a>
-        <a className="hover:fill-slate-600" href="https://github.com/JesseEmerson7">
+        <a
+          className="hover:fill-slate-600"
+          href="https://github.com/JesseEmerson7"
+        >
           <svg
-
             className="h-4"
             data-name="Layer 1"
             xmlns="http://www.w3.org/2000/svg"

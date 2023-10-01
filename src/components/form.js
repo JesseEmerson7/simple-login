@@ -36,9 +36,9 @@ const Form = () => {
   };
   //on submit handler
   const handleSubmit = (e) => {
-    /*Here I would send a POST to the server side. (SELECT * FROM users
-WHERE username = userId AND password = password;) The password would be unHashed and compared.
-A token would be added to the user as well.
+    /*Here I would send a POST request to the server side. I would then make a database query with that information (SELECT * FROM users
+WHERE username = userId AND password = password;) The password would be unHashed and compared. response would be sent back to the front end. If no match error message would be displayed above login button
+A token would be added to the user as well when logged in.
  */
     e.preventDefault();
     //temp input checker until server side is done.
@@ -76,7 +76,7 @@ A token would be added to the user as well.
       {/* form div */}
       <div className="w-full lg:w-5/12 xl:w-4/12 md:w-8/12 md:shadow-2xl md:p-16 md:relative md:bottom-24 md:mx-auto md:rounded-sm px-4 pt-2 bg-white min-h-screen">
         {/* title */}
-        <div className="mb-2">
+        <div className="mb-4">
           <span className=" text-2xl">Welcome to</span>
           <a href="https://forms.floridarealtors.org/index/signin">
             <img
@@ -110,7 +110,7 @@ A token would be added to the user as well.
               className={userInputColor ? "formInput" : "formInputFalse"}
               ref={firstInputRef}
             />
-            <div className={userInputColor ? "hidden" : "errorPop"}>
+            <div className={userInputColor ? "hidden" : "errorPop fadeIn"}>
               Please enter your user ID
             </div>
           </div>
@@ -145,12 +145,12 @@ A token would be added to the user as well.
                 passInputColor ? "formInput w-full" : "formInputFalse w-full"
               }
             />
-            <div className={passInputColor ? "hidden errorPop" : "errorPop"}>
+            <div className={passInputColor ? "hidden" : "errorPop fadeIn"}>
               Please enter your password
             </div>
           </div>
           <div className="mb-10">
-            <a className="dgLink text-sm hover:underline" href="google.com">
+            <a className="dgLink text-sm hover:underline font-semibold" href="google.com">
               I would like to reset or register my password.
             </a>
           </div>
