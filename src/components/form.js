@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import EyeSvg from "./eyeSvg";
 import "../components/form.css";
 //login form component
-const Form = () => {
+const Form = ({setPage}) => {
   //crating a ref to first input and second
   const firstInputRef = useRef(null);
   const secondInputRef = useRef(null);
@@ -21,6 +21,7 @@ const Form = () => {
   const [submitErr, changeErr] = useState(false);
   const [loginBtnValue, changeLoginBtn] = useState("Log-in");
   //----component functions----
+  //toggle to view password
   const handleEyeClick = () => {
     passwordState === "password"
       ? setPasswordState("text")
@@ -57,7 +58,8 @@ A token would be added to the user as well when logged in.
         userId: "",
         password: "",
       });
-      window.location = "https://github.com/JesseEmerson7";
+      setPage(false);
+      // window.location = "https://github.com/JesseEmerson7";
     } else if (!formInputs.userId) {
       firstInputRef.current.focus();
     } else if (!formInputs.password) {
@@ -183,7 +185,10 @@ A token would be added to the user as well when logged in.
               provided information to contact you about new features, training,
               and more. You may unsubscribe from these communications at any
               time.
-              <a href="google.com" className=" no-underline text-blue-600">
+              <a
+                href="https://www.floridarealtors.org/"
+                className=" no-underline text-blue-600 hover:underline"
+              >
                 Privacy Policy
               </a>
             </p>
