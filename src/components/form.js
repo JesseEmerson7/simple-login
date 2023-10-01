@@ -28,11 +28,14 @@ const Form = () => {
   };
   //form change handler
   const handleFormChange = (e) => {
-    //changing color back to green if not empty
-    changeUserColor(true);
-    changePassColor(true);
-    //changing form object value
     const { name, value } = e.target;
+    //changing color back to green if not empty
+    if (name === "userId") {
+      changeUserColor(true);
+    } else {
+      changePassColor(true);
+    }
+    //changing form object value
     changeFormInputs({
       ...formInputs,
       [name]: value,
