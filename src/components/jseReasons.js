@@ -38,7 +38,7 @@ const Reasons = ({ setPage }) => {
     },
     {
       title: "Goal oriented",
-      text: "With my mother being a Realtor I see how technology and automation has benefited Realtors and home owners.  My goal at Florida Realtors is to contribute as a valuable team member and enhance the real estate profession by creating refined and effective software applications.",
+      text: "With my mother being a Realtor I see how technology and automation has benefited Realtors and homeowners.  My goal at Florida Realtors is to contribute as a valuable team member and enhance the real estate profession by creating refined and effective software applications.",
     },
   ];
   //back button click
