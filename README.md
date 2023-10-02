@@ -1,4 +1,4 @@
-# simple-login
+# simplicity-login
 
 [Visit live application!](https://jesseemerson7.github.io/simplicity-login/)
 
@@ -11,6 +11,7 @@ This is a copy of Florida Realtors login page recreated using React.js. This is 
 To use this application first type in admin for both username and password and click log-in. To view your password you can click on the eye icon.
 ![Alt text](src/images/jesseemerson7.github.io_simplicity-login_.png)
 ![Alt text](<src/images/Screenshot 2023-09-30 213911.png>)
+
 ## Questions
 
 Here is the link to my Github profile https://github.com/jesseemerson7
