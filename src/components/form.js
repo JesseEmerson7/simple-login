@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import EyeSvg from "./eyeSvg";
 import "../components/form.css";
 //login form component
-const Form = ({setPage}) => {
+const Form = ({ setPage }) => {
   //crating a ref to first input and second
   const firstInputRef = useRef(null);
   const secondInputRef = useRef(null);
@@ -161,7 +161,7 @@ A token would be added to the user as well when logged in.
           <div className="mb-10">
             <a
               className="dgLink text-sm hover:underline font-semibold"
-              href="https://github.com/JesseEmerson7S"
+              href="https://github.com/JesseEmerson7"
             >
               I would like to reset or register my password.
             </a>
