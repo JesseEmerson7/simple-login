@@ -36,10 +36,6 @@ const Reasons = ({ setPage }) => {
       title: "Leadership skills",
       text: "I have a history of leadership, having led teams in past roles, and I've also gained practical experience in building web applications during my academic pursuits.",
     },
-    {
-      title: "Goal oriented",
-      text: "With my mother being a Realtor I see how technology and automation has benefited Realtors and homeowners.  My goal at Florida Realtors is to contribute as a valuable team member and enhance the real estate profession by creating refined and effective software applications.",
-    },
   ];
   //back button click
   const handelBack = () => {
@@ -50,7 +46,7 @@ const Reasons = ({ setPage }) => {
     <section className="w-full min-h-screen">
       <div className="w-full lg:w-6/12 xl:w-6/12 md:w-8/12 md:shadow-2xl md:p-16 md:relative md:bottom-24 md:mx-auto md:rounded-sm px-4 pt-2 min-h-screen border-blue-500 border-4 bg-slate-100 text-black fadeIn">
         <h1 className=" text-3xl font-semibold border-b-2 border-blue-500 text-center pb-4">
-          10 Reasons to hire Jesse Emerson
+          Reasons to hire Jesse Emerson
         </h1>
         <div>
           {reasons.map(({ title, text }) => {
